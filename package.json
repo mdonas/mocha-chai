@@ -1,0 +1,21 @@
+{
+  "name": "mochachai",
+  "version": "1.0.0",
+  "description": "Trabajo de Fermin",
+  "main": "main.js",
+  "type":"module",
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/_mocha"
+  },
+  "keywords": [
+    "mocha",
+    "chai",
+    "javascript"
+  ],
+  "author": "marcos&cesar",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*"
+  }
+}
