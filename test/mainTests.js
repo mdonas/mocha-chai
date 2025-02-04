@@ -1,16 +1,44 @@
-import assert from 'assert';
+// import assert from 'assert';
 import * as main from "../main.js"
+import { expect, assert, should } from 'chai';
 
 //Results
 const helloWorldText = main.helloWorld();
 const subtractionResult = main.substraction(5, 1)
-const arrrayOfNumbersResult = main.arrrayOfNumbers()
+const arrayOfNumbersResult = main.arrayOfNumbers()
 
-describe('Main Suite', function () {
+describe('Main Test', function () {
     describe('Hello World Funcion -  Test Case', function () {
         it('Hello World text is as expected', function () {
-            assert.equal(helloWorldText, 'htu puta madre')
+            assert.equal(helloWorldText, 'hello world')
+        })
+        it('Validate data type', function () {
+            assert.strictEqual(typeof helloWorldText, 'string')
+            // assert.typeOf(helloWorldText, 'string');
+            // expect(typeof helloWorldText).to.be.a('string')
+            //No va porque no tiene propiedades
+            // (typeof helloWorldText).should.be.a('string')
         })
     })
+    describe('Subtraction -  Test Case', function () {
+        it('Subtraction result as expected', function () {
+            assert.isBelow(subtractionResult, 5)
+        })
+        it('Validate data type', function () {
+            // assert.strictEqual(typeof subtractionResult, 'number', 'The expected data type is a int')
+            expect(subtractionResult).to.be.a('number')
+        })
+    })
+    describe('Array -  Test Case', function () {
+        it('Array include 5', function () {
+            // assert.include(arrayOfNumbersResult, 5)
+            // expect(arrayOfNumbersResult).to.include(5);
+            should(arrayOfNumbersResult.includes(5))
 
+        })
+        it('Validate data type', function () {
+            // assert.strictEqual(typeof subtractionResult, 'number', 'The expected data type is a int')
+            expect(subtractionResult).to.be.a('number')
+        })
+    })
 })
