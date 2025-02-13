@@ -1,6 +1,5 @@
-var should = require('chai').should()
 let items = [];
-
+import * as chai from 'chai'
 describe('Array Should Methods', function () {
 
     describe('Built in methods', function () {
@@ -14,7 +13,8 @@ describe('Array Should Methods', function () {
         });
 
         it('should return number of array items', function () {
-            items.should.have.length(2);
+            // items.should.have.length(2);
+            chai.should(items.should.have.length(2))
         });
 
         it('should add a new value', function () {

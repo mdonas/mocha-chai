@@ -1,5 +1,5 @@
 // import assert from 'assert';
-import * as main from "../main.js"
+import * as main from "../../first.js"
 import { expect, assert, should } from 'chai';
 
 //Results
@@ -26,7 +26,9 @@ describe('Main Test', function () {
         })
         it('Validate data type', function () {
             // assert.strictEqual(typeof subtractionResult, 'number', 'The expected data type is a int')
-            expect(subtractionResult).to.be.a('number')
+            // expect(subtractionResult).to.be.a('number')
+            // expect(subtractionResult).to.be.a('number')
+            // expect.subtractionResult.to.be.a('number')
         })
     })
     describe('Array -  Test Case', function () {

@@ -72,6 +72,7 @@ function pintarPersonajes(personajes) {
     })
     divResultados.appendChild(fragment)
 }
+
 function limpiarPersonajes() {
     divResultados.textContent = ""
 }
