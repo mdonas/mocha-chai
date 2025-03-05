@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mocha Tests</title>
+    <!-- Cargar Mocha desde CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mocha/10.2.0/mocha.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/10.2.0/mocha.min.js"></script>
+    <!-- Cargar Chai desde CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.3.7/chai.min.js"></script>
+    <style>
+      #mocha {
+        margin: 20px;
+        font-family: Arial, sans-serif;
+      }
+      .test.fail {
+        color: #c00;
+      }
+      .test.pass {
+        color: #0c0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Contenedor para los resultados de Mocha -->
+    <div id="mocha"></div>
+    <!-- Contenedor para mensajes de error -->
+    <div
+      id="error-messages"
+      style="color: red; margin: 20px; display: none"
+    ></div>
+
+    <!-- Configuración de Mocha -->
+    <script>
+      mocha.setup({
+        ui: "bdd",
+      });
+      // Configurar Chai para usar el estilo de aserciones expect
+      let expect = chai.expect;
+    </script>
+
+    <!-- Importar el archivo de prueba usando módulos ES6 -->
+    <script type="module">
+      // Importar los archivos de prueba
+      import "./js/test/ui/character-renderer-test.js";
+      import "./js/test/ui/pagination-controller-test.js";
+
+      // Ejecutar las pruebas después de cargar el módulo
+      window.addEventListener("load", function () {
+        try {
+          // Ejecutar Mocha y capturar cualquier error
+          const runner = mocha.run();
+        } catch (e) {
+          // Capturar errores generales
+          console.error("Error al ejecutar las pruebas:", e);
+          document.getElementById(
+            "error-messages"
+          ).innerHTML = `<p>Error al ejecutar las pruebas: ${e.message}</p>`;
+          document.getElementById("error-messages").style.display = "block";
+        }
+      });
+    </script>
+  </body>
+</html>

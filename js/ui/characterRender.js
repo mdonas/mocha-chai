@@ -16,7 +16,8 @@ class CharacterRenderer {
     if (
       !characters ||
       !characters.results ||
-      !Array.isArray(characters.results)
+      !Array.isArray(characters.results) ||
+      characters.results.length === 0
     ) {
       this.errorContainer.innerHTML =
         '<div class="alert alert-danger mt-5 mx-auto text-center w-50">No hay resultados para mostrar</div>';
