@@ -1,12 +1,20 @@
 {
     "rewrites": [
-      {
-        "source": "/report",
-        "destination": "/mochawesome-report/report.html"
-      },
-      {
-        "source": "/testing",
-        "destination": "/test/index.html"
-      }
+        {
+            "source": "/report",
+            "destination": "/mochawesome-report/report.html"
+        },
+        {
+            "source": "/assets/:path*",
+            "destination": "/mochawesome-report/assets/:path*"
+        },
+        {
+            "source": "/testing",
+            "destination": "/test/index.html"
+        },
+        {
+            "source": "/ui/:path*",
+            "destination": "/test/ui/:path*"
+        }
     ]
-  }
+}
