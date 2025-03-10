@@ -2,10 +2,10 @@
     "rewrites": [
       {
         "source": "/report",
-        "destination": "/mochawesome-report/index.html"
+        "destination": "/mochawesome-report/report.html"
       },
       {
-        "source": "/test",
+        "source": "/testing",
         "destination": "/test/index.html"
       }
     ]
