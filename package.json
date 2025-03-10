@@ -5,9 +5,9 @@
   "main": "main.js",
   "type": "module",
 "scripts": {
-"test": "node ./node_modules/mocha/bin/_mocha ejemplos/test/**/*.js",
-"testRick": "node ./node_modules/mocha/bin/_mocha js/test/**/*.js",
-"testMochawesome": "node ./node_modules/mocha/bin/_mocha js/test/**/*.js --reporter mochawesome --reporter-options reportDir=mochawesome-report,reportFilename=report,charts=true,autoOpen=true"
+"test": "node ./node_modules/mocha/bin/_mocha test/ejemplos/**/*.js",
+"testApi": "node ./node_modules/mocha/bin/_mocha test/services/**/*.js",
+"report": "node ./node_modules/mocha/bin/_mocha test/{ejemplos,services}/*.js --reporter mochawesome --reporter-options reportDir=mochawesome-report,reportFilename=report,charts=true,autoOpen=true"
 },
   "keywords": [
     "mocha",

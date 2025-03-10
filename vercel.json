@@ -1,0 +1,12 @@
+{
+    "rewrites": [
+      {
+        "source": "/report",
+        "destination": "/mochawesome-report/index.html"
+      },
+      {
+        "source": "/test",
+        "destination": "/test/index.html"
+      }
+    ]
+  }

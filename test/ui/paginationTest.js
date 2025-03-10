@@ -1,6 +1,5 @@
 // Using global chai from CDN in the browser
-// const expect = chai.expect;
-import PaginationController from "../../ui/paginationController.js";
+import PaginationController from "../../app/ui/paginationController.js";
 
 describe("PaginationController", () => {
   let document;
@@ -60,6 +59,7 @@ describe("PaginationController", () => {
       expect(paginationController.btnRight).to.equal(btnRight);
       expect(paginationController.inputPage).to.equal(inputPage);
       expect(paginationController.labelPage).to.equal(labelPage);
+      expect;
     });
   });
 
@@ -176,7 +176,6 @@ describe("PaginationController", () => {
       labelPage.textContent = " / 5";
 
       paginationController.hideOnError();
-      console.log(btnLeft);
       expect(btnLeft.innerHTML).to.equal("");
       expect(btnRight.innerHTML).to.equal("");
       expect(btnLeft.querySelector("button")).to.be.null;

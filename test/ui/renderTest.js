@@ -1,7 +1,7 @@
-import CharacterRenderer from "../../ui/characterRender.js";
+import CharacterRenderer from "../../app/ui/characterRender.js";
 
 // Suite de pruebas para CharacterRenderer
-describe.skip("CharacterRenderer", function () {
+describe("CharacterRenderer", function () {
   let characterRenderer;
   let resultsContainer;
   let cardTemplate;
@@ -16,18 +16,18 @@ describe.skip("CharacterRenderer", function () {
     cardTemplate = document.createElement("div");
     cardTemplate.id = "card-template";
     cardTemplate.innerHTML = `
-    <div class="card">
-        <img class="img-fluid w-100" src="" alt="">
+      <div
+        class="card col-xl-3 col-lg-4 col-md-6 col-sm-12 rounded-0 border-brown"
+      >
         <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="estado"></p>
-        <p class="genero"></p>
-        <p class="especies"></p>
+          <img class="img-fluid w-100" src="" alt="" />
+          <h5 class="card-title"></h5>
+          <p class="estado"></p>
+          <p class="genero"></p>
+          <p class="especies"></p>
         </div>
-    </div>
+      </div>
     `;
-    // Obtenemos el div interior para pasar como template
-    cardTemplate = cardTemplate.firstElementChild;
 
     errorContainer = document.createElement("div");
     errorContainer.id = "error-container";

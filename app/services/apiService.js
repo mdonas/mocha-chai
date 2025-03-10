@@ -6,7 +6,6 @@ class ApiService {
   async getCharactersByName(name) {
     const url = `${this.baseUrl}?name=${name}`;
     const response = await fetch(url);
-    console.log(url);
     return await response.json();
   }
 
