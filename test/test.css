@@ -39,6 +39,20 @@ header h1 {
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
 }
 
+/* Mejorar visibilidad de las estadísticas en móvil */
+#mocha-stats {
+    background: rgba(255, 255, 255, 0.508) !important;
+    color: #232526 !important;
+    padding: 1rem !important;
+    border-radius: 0.8rem !important;
+    font-weight: bold !important;
+}
+
+#mocha .stats li {
+    color: #232526 !important;
+    margin: 0.2rem 0 !important;
+}
+
 .test.fail {
     color: #ff512f;
     background: rgba(255, 81, 47, 0.1);
@@ -60,4 +74,26 @@ h2,
 h3 {
     color: #d0ddde;
     padding: 5px 0;
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+    #mocha {
+        margin: 10px;
+        padding: 1rem;
+    }
+
+    #mocha .stats {
+        font-size: 0.9rem !important;
+        text-align: center !important;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .btn-link {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
 }

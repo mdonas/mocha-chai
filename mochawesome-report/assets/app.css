@@ -4358,6 +4358,9 @@ pre {
     font-family: 'Roboto', Arial, sans-serif !important;
     border: 2px solid #00adb5 !important;
     display: block !important;
+    width: auto !important;
+    max-width: 220px !important;
+    text-align: center !important;
 }
 
 .custom-nav-button:hover {
@@ -4375,9 +4378,20 @@ pre {
 
 @media (max-width: 768px) {
     .custom-nav-button {
-        top: 10px !important;
+        bottom: 10px !important;
+        right: 10px !important;
         left: 10px !important;
-        padding: 8px 16px !important;
-        font-size: 12px !important;
+        padding: 10px 16px !important;
+        font-size: 13px !important;
+        width: auto !important;
+        max-width: calc(100vw - 20px) !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    .navbar {
+        padding-top: 20px !important;
     }
 }
