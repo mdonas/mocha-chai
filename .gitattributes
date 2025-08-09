@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 # Git attributes for language detection
 *.css linguist-detectable=false
 *.js linguist-detectable=true
 *.html linguist-detectable=true
 mochawesome-report/* linguist-generated=true
 mochawesome-report/assets/* linguist-vendored=true
+=======
+*.css linguist-detectable=false
+>>>>>>> 0b12f187f153592a992644961736f51adef9c965
