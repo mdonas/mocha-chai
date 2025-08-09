@@ -10,80 +10,70 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <title>Testing With Mocha&Chai</title>
-    <link rel="icon" type="image/x-icon" href="img/rick.ico" />
+  <title>Rick & Morty Characters</title>
+  <link rel="icon" type="image/x-icon" href="img/rick.ico" />
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   </head>
 
-  <body class="bg-skin">
-    <div class="bg-brown">
-      <div class="container">
-        <form
-          id="busqueda"
-          action=""
-          class="row justify-content-evenly align-items-center pt-3"
-        >
-          <div class="col-4">
-            <input type="text" id="nombre" class="form-control" />
-          </div>
-          <button type="submit" class="btn btn-primary col-2">Submit</button>
-        </form>
-        <div
-          id="buttons"
-          class="row justify-content-center align-items-center py-4"
-        >
-          <div id="left" class="col-4 justify-content-center row"></div>
-          <div id="mid" class="col-4">
-            <div class="input-group">
-              <input
-                id="inputPage"
-                type="text"
-                class="form-control col-4 form-control-focus-none"
-              />
-              <label id="labelPage" class="input-group-text"></label>
-            </div>
-          </div>
-          <div id="right" class="col-4 justify-content-center row"></div>
+  <body class="bg-rm ">
+    <header class="header-rm py-4 mb-4">
+      <div class="container d-flex flex-column align-items-center">
+        <img src="img/rick.ico" alt="Rick and Morty" width="64" height="64" class="mb-2" />
+        <h1 class="title-rm mb-0">Rick & Morty Characters</h1>
+        <div class="d-flex gap-3 mt-3">
+          <a href="/test/index.html" class="btn btn-outline-light btn-sm px-4 py-2 fw-bold shadow-sm btn-link">Test Runner</a>
+          <a href="/mochawesome-report/report.html" class="btn btn-outline-light btn-sm px-4 py-2 fw-bold shadow-sm btn-link">Mochawesome Report</a>
         </div>
       </div>
-    </div>
-    <div>
-      <div class="container">
-        <div class="resultados row"></div>
-        <div class="errores row justify-content-center"></div>
-      </div>
-    </div>
+    </header>
+    <main>
+      <section class="search-section py-3">
+        <div class="container">
+          <form id="busqueda" action="" class="row justify-content-center align-items-center g-2">
+            <div class="col-12 col-md-6 col-lg-4 mb-2 mb-md-0">
+              <input type="text" id="nombre" class="form-control form-control-lg search-input" placeholder="Buscar personaje..." />
+            </div>
+            <div class="col-12 col-md-3 col-lg-2">
+              <button type="submit" class="btn btn-rm w-100 btn-lg">Buscar</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="mb-2 py-2">
+        <div class="container">
+          <div id="buttons" class="row justify-content-center align-items-center">
+            <div id="left" class="col-4 justify-content-center row"></div>
+            <div id="mid" class="col-4">
+              <div class="input-group justify-content-center">
+                <input id="inputPage" type="text" class="form-control form-control-focus-none text-center" style="max-width: 70px; display: inline-block;" />
+                <label id="labelPage" class="input-group-text"></label>
+              </div>
+            </div>
+            <div id="right" class="col-4 justify-content-center row"></div>
+          </div>
+        </div>
+      </section>
+      <section class="results-section py-3">
+        <div class="container">
+          <div class="resultados row justify-content-center gap-4"></div>
+          <div class="errores row justify-content-center"></div>
+        </div>
+      </section>
+    </main>
     <template id="template-card">
-      <div
-        class="card col-xl-3 col-lg-4 col-md-6 col-sm-12 rounded-0 border-brown"
-      >
-        <div class="card-body">
-          <img class="img-fluid w-100" src="" alt="" />
-          <h5 class="card-title"></h5>
-          <p class="estado"></p>
-          <p class="genero"></p>
-          <p class="especies"></p>
+      <div class="card card-rm col-xl-3 col-lg-3 col-md-5 col-sm-12">
+        <div class="card-body p-2 d-flex flex-column align-items-center">
+          <img class="img-fluid rounded-circle mb-2 card-img-rm" src="" alt="" style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #00adb5; background: #fff;" />
+          <h5 class="card-title text-center fw-bold mb-1"></h5>
+          <p class="estado mb-0"></p>
+          <p class="genero mb-0"></p>
+          <p class="especies mb-0"></p>
         </div>
       </div>
     </template>
-    <style>
-      .bg-brown {
-        background-color: #44281d;
-      }
 
-      .border-brown {
-        border: 3px solid #44281d;
-      }
-
-      .bg-skin {
-        background-color: #645e5b80;
-      }
-
-      #inputPage {
-        outline: none;
-      }
-    </style>
-
-    <script type="module" src="./app/main.js"></script>
+  <script type="module" src="./app/main.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

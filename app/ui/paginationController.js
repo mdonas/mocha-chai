@@ -8,10 +8,10 @@ class PaginationController {
 
   updatePagination(results) {
     this.btnLeft.innerHTML = results.info.prev
-      ? `<button id="prev" class="col-4 btn btn-primary prev btn-sm-height" data-url=${results.info.prev}>Anterior</button>`
+      ? `<button id="prev" class="col-4 btn btn-rm prev btn-sm-height" data-url=${results.info.prev}>Anterior</button>`
       : "";
     this.btnRight.innerHTML = results.info.next
-      ? `<button id="next" class="col-4 btn btn-primary prev btn-sm-height" data-url=${results.info.next}>Siguiente</button>`
+      ? `<button id="next" class="col-4 btn btn-rm prev btn-sm-height" data-url=${results.info.next}>Siguiente</button>`
       : "";
 
     this.updatePageCounter(results);

@@ -10,6 +10,26 @@ class CharacterRenderer {
     this.resultContainer.textContent = "";
   }
 
+  calculateState(state) {
+    if (state == "Alive") {
+      return "Vivo/a"
+    } else if (state == "Dead") {
+      return "Muerto/a"
+    } else {
+      return "Desconocido"
+    }
+  }
+
+  calculateGenre(genre) {
+    if (genre == "Male") {
+      return "Hombre"
+    } else if (genre == "Female") {
+      return "Mujer"
+    }
+  }
+
+
+
   renderCharacters(characters) {
     this.clearCharacters();
 
@@ -34,9 +54,9 @@ class CharacterRenderer {
       this.templateCard.querySelector("h5").textContent = character.name;
 
       let paragraphs = this.templateCard.querySelectorAll("p");
-      paragraphs[0].textContent = `Status: ${character.status}`;
-      paragraphs[1].textContent = `Genre: ${character.gender}`;
-      paragraphs[2].textContent = `Species: ${character.species}`;
+      paragraphs[0].textContent = `Estado: ${this.calculateState(character.status)}`;
+      paragraphs[1].textContent = `Genero: ${this.calculateGenre(character.gender)}`;
+      paragraphs[2].textContent = `Especie: ${character.species}`;
 
       const clone = this.templateCard.cloneNode(true);
       this.fragment.appendChild(clone);

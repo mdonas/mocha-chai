@@ -1,0 +1,143 @@
+body {
+    box-sizing: border-box;
+}
+
+body.bg-rm {
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    font-family: 'Roboto', Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.header-rm {
+    background: linear-gradient(90deg, #00adb5 50%, #393e46 120%);
+    color: #fff;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+.title-rm {
+    font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px #23252680;
+}
+
+.subtitle-rm {
+    font-size: 1.1rem;
+    color: #b2fefa;
+    margin-bottom: 0;
+}
+
+.search-section {
+    background: #393e46;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+    margin-bottom: 1.5rem;
+}
+
+.search-input {
+    border-radius: 2rem;
+    border: 2px solid #00adb5;
+    font-size: 1.1rem;
+    padding-left: 1.2rem;
+    background: #232526;
+    color: #fff;
+}
+
+.search-input:focus {
+    border-color: #b2fefa;
+    box-shadow: 0 0 0 2px #00adb580;
+    background: #232526;
+    color: #fff;
+}
+
+.btn-rm {
+    background: linear-gradient(90deg, #00adb5 0%, #43e97b 100%);
+    color: #232526;
+    font-weight: bold;
+    border: none;
+    border-radius: 2rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-rm:hover,
+.btn-rm:focus {
+    background: linear-gradient(90deg, #43e97b 0%, #00adb5 100%);
+    color: #232526;
+}
+
+.btn-link {
+    border-radius: 2rem;
+    background: #393e46;
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+
+.results-section {
+    min-height: 300px;
+}
+
+.card-rm {
+    background: #393e46;
+    border: 2px solid #00adb5;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 24px rgba(0, 173, 181, 0.10);
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 1.5rem;
+}
+
+.card-rm:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(0, 173, 181, 0.20);
+}
+
+.card-img-rm {
+    box-shadow: 0 2px 8px #23252680;
+}
+
+.card-title {
+    color: #00adb5;
+    font-size: 1.2rem;
+    font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+}
+
+.estado,
+.genero,
+.especies {
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.errores .alert {
+    font-size: 1.1rem;
+    border-radius: 1rem;
+    background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);
+    color: #fff;
+    border: none;
+    box-shadow: 0 2px 8px rgba(255, 81, 47, 0.15);
+}
+
+@media (max-width: 600px) {
+    .header-rm {
+        font-size: 1.2rem;
+        padding: 1rem 0.5rem;
+    }
+
+    .title-rm {
+        font-size: 1.5rem;
+    }
+
+    .card-rm {
+        border-radius: 1rem;
+    }
+
+    .card-img-rm {
+        width: 80px !important;
+        height: 80px !important;
+    }
+}

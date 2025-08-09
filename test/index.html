@@ -12,20 +12,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/10.2.0/mocha.min.js"></script>
     <!-- Cargar Chai desde CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.3.7/chai.min.js"></script>
-    <style>
-      #mocha {
-        margin: 20px;
-        font-family: Arial, sans-serif;
-      }
-      .test.fail {
-        color: #c00;
-      }
-      .test.pass {
-        color: #0c0;
-      }
-    </style>
+    <link rel="stylesheet" href="test.css">
   </head>
   <body>
+    <!-- Header con botón de navegación -->
+    <header>
+      <h1>Test Runner - Mocha & Chai</h1>
+      <a href="/" class="btn-link">← Volver a Personajes</a>
+    </header>
+    
     <!-- Contenedor para los resultados de Mocha -->
     <div id="mocha"></div>
     <!-- Contenedor para mensajes de error -->
