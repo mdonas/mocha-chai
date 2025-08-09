@@ -122,6 +122,45 @@ body.bg-rm {
     box-shadow: 0 2px 8px rgba(255, 81, 47, 0.15);
 }
 
+/* Estilos para botones de paginación */
+.pagination-section {
+    background: #232526;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+}
+
+#buttons .btn {
+    min-width: 120px;
+    padding: 8px 16px;
+    font-size: 14px;
+    white-space: nowrap;
+    border-radius: 2rem;
+}
+
+#inputPage {
+    background: #393e46;
+    border: 2px solid #00adb5;
+    color: #fff;
+    border-radius: 0.5rem;
+    max-width: 80px;
+}
+
+#inputPage:focus {
+    background: #393e46;
+    border-color: #b2fefa;
+    box-shadow: 0 0 0 2px #00adb580;
+    color: #fff;
+}
+
+#labelPage {
+    background: #393e46;
+    border: 2px solid #00adb5;
+    border-left: none;
+    color: #fff;
+    border-radius: 0.5rem;
+}
+
 @media (max-width: 600px) {
     .header-rm {
         font-size: 1.2rem;
@@ -139,5 +178,41 @@ body.bg-rm {
     .card-img-rm {
         width: 80px !important;
         height: 80px !important;
+    }
+
+    /* Mejoras para botones de paginación en móvil */
+    #buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #buttons .col-4 {
+        flex: none;
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    #buttons .btn {
+        width: 100%;
+        min-width: auto;
+        padding: 12px 20px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    #mid {
+        order: -1;
+        margin-bottom: 1rem;
+    }
+
+    #mid .input-group {
+        max-width: 150px;
+        margin: 0 auto;
+    }
+
+    #inputPage {
+        max-width: 60px;
+        text-align: center;
     }
 }
