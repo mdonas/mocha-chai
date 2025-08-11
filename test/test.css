@@ -41,6 +41,7 @@ header h1 {
 
 /* Mejorar visibilidad de las estadísticas en móvil */
 #mocha-stats {
+    position: relative;
     background: rgba(255, 255, 255, 0.508) !important;
     color: #232526 !important;
     padding: 1rem !important;
